@@ -1,31 +1,39 @@
+import kotlin.math.max
+
 fun main() {
     //Funções do exercício sobre Loop While
+//
+//    println("Exercício 1 Loop While"); at1ex1()
+//    println("Exercício 2 Loop While"); at1ex2()
+//    println("Exercício 3 Loop While"); at1ex3()
+//
+//    println("Exercício 1 Do-While"); at2ex1()
+//    println("Exercício 2 Do-While"); at2ex2()
+//    println("Exercício 3 Do-While"); at2ex3()
+//
+//    println("Exercício 1 Loop For"); at3ex1()
+//    println("Exercício 2 Loop For"); at3ex2()
+//    println("Exercício 3 Loop For"); at3ex3()
+//
+//
+//    println("Exercício 1 Range"); at4ex1()
+//    println("Exercício 2 Range"); at4ex2()
+//    println("Exercício 3 Range"); at4ex3()
+//
+//
+//    println("Exercício 1 Continue, Break & repeat"); at5ex1()
+//    println("Exercício 2 Continue, Break & repeat"); at5ex2()
+//    println("Exercício 3 Continue, Break & repeat"); at5ex3()
+//
+//    println("Exercício 1 Strings"); at6ex1()
+//    println("Exercício 2 Strings"); at6ex2()
+//    println("Exercício 3 Strings"); at6ex3()
+//
+//    println("Exercício 1 Array"); at7ex1()
+//    println("Exercício 2 Array"); at7ex2()
+//    println("Exercício 3 Array"); at7ex3()
 
-    println("Exercício 1 Loop While"); at1ex1()
-    println("Exercício 2 Loop While"); at1ex2()
-    println("Exercício 3 Loop While"); at1ex3()
-
-    println("Exercício 1 Do-While"); at2ex1()
-    println("Exercício 2 Do-While"); at2ex2()
-    println("Exercício 3 Do-While"); at2ex3()
-
-    println("Exercício 1 Loop For"); at3ex1()
-    println("Exercício 2 Loop For"); at3ex2()
-    println("Exercício 3 Loop For"); at3ex3()
-
-
-    println("Exercício 1 Range"); at4ex1()
-    println("Exercício 2 Range"); at4ex2()
-    println("Exercício 3 Range"); at4ex3()
-
-
-    println("Exercício 1 Continue, Break & repeat"); at5ex1()
-    println("Exercício 2 Continue, Break & repeat"); at5ex2()
-    println("Exercício 3 Continue, Break & repeat"); at5ex3()
-
-    println("Exercício 1 Strings"); at6ex1()
-    println("Exercício 2 Strings"); at6ex2()
-    println("Exercício 3 Strings"); at6ex3()
+    println("Desafio."); desafio()
 
 }
 //Explicando para uma criança: é um tipo de loop
@@ -247,8 +255,156 @@ for(i in 0..xis){
 //*2 -* Escreva um programa que leia uma frase do usuário e imprima a mesma frase em ordem inversa usando loop for.
 //
 //3 - Escreva um programa que leia uma frase do usuário e imprima apenas as vogais da frase usando loop for e if.
-fun at6ex1(){}
+fun at6ex1(){
+    println("Digite uma frase: ")
+    var x = readLine()!!
+    print("A sua frase possui " + x.length +" caracteres")
+    println("")
+}
 
-fun at6ex2(){}
+fun at6ex2(){
+    println("Digite uma frase: ")
+    var frase = readLine()!!
+    var new =""
+    for(y in frase.reversed()){
+        new += y
+    }
+    print(new)
+    println("")
+}
 
-fun at6ex3(){}
+fun at6ex3(){
+    println("Digite uma frase: ")
+    var frase = readLine()!!.toUpperCase()
+    var new =""
+    for(y in frase){
+     if(y =='A' || y=='E' || y=='I' || y=='O' || y=='U'){
+         new+="$y,"
+     }
+    }
+print("As vogais encontradas foram: $new")
+}
+
+
+//**Array**
+//
+//Explicando para uma criança: são estruturas de dados que permitem armazenar um conjunto de valores em uma única variável. É como uma caixa com vários compartimentos, cada compartimento pode armazenar um valor. Você pode usar arrays para armazenar uma coleção de valores e acessá-los usando um índice.
+//
+//1 - Escreva um programa que crie um array de 10 números inteiros aleatórios e imprima o maior número do array.
+//
+//2 - Escreva um programa que crie um array de 10 números inteiros digitados pelo usuário e imprima a média dos números do array.
+//
+//3 - Escreva um programa que crie um array de 10 strings com nomes de frutas e imprima somente as frutas que começam com a letra "a" usando loop for e if.
+fun at7ex1(){
+    val array = intArrayOf(32, 81, 18, 66, 9, 44, 1, 89, 41, 84)
+    println("Maior valor: " + array.max())
+}
+
+fun at7ex2(){
+    var soma = 0
+var array = IntArray(10)
+   for(i in array.indices){
+       println("Digite o ${i+1} número: ")
+       array[i] = readLine()!!.toInt()
+       soma+=array[i]
+   }
+    var lista = ""
+    for (i in array.indices) {
+        lista += array[i]
+        if (i != array.size - 1) {
+            lista += ", "
+        } else {
+            lista += "."
+        }
+    }
+    print("[$lista]\nA média desses valores é de ${soma.toDouble()/array.size.toDouble()}")
+    println("")
+}
+
+fun at7ex3(){
+val array = arrayOf("banana","abacaxi","mamão","amora","melancia","abacate","goiaba","maça","kiwi","laranja")
+    for(i in array){
+        if(i.first()=='a'){
+            print("$i, ")
+        }
+    }
+}
+
+//**Desafio semanal**:
+//
+//Crie um programa em Kotlin que permita ao usuário digitar o nome e a idade de várias pessoas, armazenando essas informações em um array de objetos Pessoa. O programa deve ter as seguintes funcionalidades:
+//
+//1 - Permitir ao usuário adicionar uma nova pessoa ao array, informando o nome e a idade.
+//
+//2 - Exibir a lista de todas as pessoas adicionadas ao array, mostrando o nome e a idade de cada uma.
+//
+//3 - Exibir a média de idade das pessoas adicionadas ao array.
+//
+//4 - Permitir ao usuário buscar uma pessoa pelo nome, exibindo o nome e a idade correspondentes.
+//
+//5 - Permitir ao usuário remover uma pessoa pelo nome, atualizando o array e exibindo a lista atualizada.
+//
+//É aconselhado utilizar os conceitos de loop while, loop do-while, loop for, range, continue, break & repeat, string e array.
+fun desafio(){
+    data class Pessoa(val nome: String, val idade: Int)
+    var lista = mutableListOf<Pessoa>();
+
+    var x = true
+    while (x) {
+        println("\nEscolha uma das opções abaixo:")
+        println("1 - Adicionar pessoa")
+        println("2 - Exibir lista de pessoas")
+        println("3 - Exibir média de idade")
+        println("4 - Buscar pessoa pelo nome")
+        println("5 - Remover pessoa pelo nome")
+        println("6 - Sair")
+
+
+        var option = readLine()!!.toInt()
+
+        when (option) {
+            1 -> {
+                println("Digite o nome da pessoa: ")
+                var nome = readLine()!!
+                println("Digite a idade da pessoa: ")
+                var idade = readLine()!!.toInt()
+                lista.add(Pessoa(nome, idade))
+                println("Pessoa adicionada com sucesso!")
+            }
+
+            2 -> {
+                println("Estas são as pessoas que foram adicionadas no array: ")
+                lista.forEach { pessoa ->
+                    println("${pessoa.nome} - ${pessoa.idade} anos")
+                }
+            }
+                3-> {
+                    var somaIdade= 0
+                    var media = somaIdade/lista.size.toDouble()
+                    lista.forEach{pessoa -> somaIdade += pessoa.idade}
+                    println("Esta é a média de idade: $media anos")
+                }
+                4 -> {
+                    println("Digite o nome da pessoa: ")
+                    var busca = readLine()
+                   lista.forEach{pessoa ->
+                       if(pessoa.nome == busca){println("O usuário(a) ${pessoa.nome} foi localizado(a) e possui ${pessoa.idade} anos")}
+                   }
+                }
+                5 -> {
+                    println("Digite o nome da pessoa: ")
+                    var busca = readLine()
+                    val removido = lista.removeIf { pessoa ->
+                        pessoa.nome == busca
+                    }
+                    if (removido) {
+                        println("Pessoa removida com sucesso!")
+                    } else {
+                        println("Pessoa não encontrada.")
+                    }
+                        }
+            6-> break
+            }
+        }
+    }
+
