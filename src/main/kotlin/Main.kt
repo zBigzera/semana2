@@ -1,7 +1,6 @@
 import kotlin.math.max
 
 fun main() {
-    //Funções do exercício sobre Loop While
     println("Exercício 1 Loop While"); at1ex1()
     println("Exercício 2 Loop While"); at1ex2()
     println("Exercício 3 Loop While"); at1ex3()
