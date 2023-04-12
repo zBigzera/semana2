@@ -2,36 +2,35 @@ import kotlin.math.max
 
 fun main() {
     //Funções do exercício sobre Loop While
-//
-//    println("Exercício 1 Loop While"); at1ex1()
-//    println("Exercício 2 Loop While"); at1ex2()
-//    println("Exercício 3 Loop While"); at1ex3()
-//
-//    println("Exercício 1 Do-While"); at2ex1()
-//    println("Exercício 2 Do-While"); at2ex2()
-//    println("Exercício 3 Do-While"); at2ex3()
-//
-//    println("Exercício 1 Loop For"); at3ex1()
-//    println("Exercício 2 Loop For"); at3ex2()
-//    println("Exercício 3 Loop For"); at3ex3()
-//
-//
-//    println("Exercício 1 Range"); at4ex1()
-//    println("Exercício 2 Range"); at4ex2()
-//    println("Exercício 3 Range"); at4ex3()
-//
-//
-//    println("Exercício 1 Continue, Break & repeat"); at5ex1()
-//    println("Exercício 2 Continue, Break & repeat"); at5ex2()
-//    println("Exercício 3 Continue, Break & repeat"); at5ex3()
-//
-//    println("Exercício 1 Strings"); at6ex1()
-//    println("Exercício 2 Strings"); at6ex2()
-//    println("Exercício 3 Strings"); at6ex3()
-//
-//    println("Exercício 1 Array"); at7ex1()
-//    println("Exercício 2 Array"); at7ex2()
-//    println("Exercício 3 Array"); at7ex3()
+    println("Exercício 1 Loop While"); at1ex1()
+    println("Exercício 2 Loop While"); at1ex2()
+    println("Exercício 3 Loop While"); at1ex3()
+
+    println("Exercício 1 Do-While"); at2ex1()
+    println("Exercício 2 Do-While"); at2ex2()
+    println("Exercício 3 Do-While"); at2ex3()
+
+    println("Exercício 1 Loop For"); at3ex1()
+    println("Exercício 2 Loop For"); at3ex2()
+    println("Exercício 3 Loop For"); at3ex3()
+
+
+    println("Exercício 1 Range"); at4ex1()
+    println("Exercício 2 Range"); at4ex2()
+    println("Exercício 3 Range"); at4ex3()
+
+
+    println("Exercício 1 Continue, Break & repeat"); at5ex1()
+    println("Exercício 2 Continue, Break & repeat"); at5ex2()
+    println("Exercício 3 Continue, Break & repeat"); at5ex3()
+
+    println("Exercício 1 Strings"); at6ex1()
+    println("Exercício 2 Strings"); at6ex2()
+    println("Exercício 3 Strings"); at6ex3()
+
+    println("Exercício 1 Array"); at7ex1()
+    println("Exercício 2 Array"); at7ex2()
+    println("Exercício 3 Array"); at7ex3()
 
     println("Desafio."); desafio()
 
